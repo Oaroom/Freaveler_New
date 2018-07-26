@@ -1,0 +1,553 @@
+@charset "UTF-8";
+
+
+
+body{
+	
+	align:center;
+	
+}
+
+#topBody{
+	
+		
+		align:center;
+		margin-left: 200px;
+		border-radius: 20px;
+	
+}
+
+
+#sub{
+	
+	font-size:20px;
+	color:#FF7386;
+	text-align:center;
+	font-weight:bold;
+	
+}
+
+#main{
+		font-size:50px;
+		color:#FF7386;
+		text-align: center;
+		font-weight: bold;
+	}	
+	
+	#title{
+	
+		font-size:30px;
+		color:#ABABAB;
+	
+	}
+	
+	
+	
+	/* 슬라이드쇼 css */
+	
+	
+	/*
+    these are just the default styles used in the Cycle2 demo pages.  
+    you can use these styles or any others that you wish.
+*/
+
+
+/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+.cycle-slideshow, .cycle-slideshow * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+
+.cycle-slideshow {  min-width:400px; max-width: 800px; max-height: 400px; min-height: 400px; margin: 10px auto; padding: 0; position: relative;
+    background: url(http://malsup.github.com/images/spinner.gif) no-repeat;
+
+ }
+
+/* slideshow images (for most of the demos, these are the actual "slides") */
+.cycle-slideshow img { 
+    /* 
+    some of these styles will be set by the plugin (by default) but setting them here
+    helps avoid flash-of-unstyled-content
+    */
+    position: absolute; top: 0; left: 0;
+    width: 800px; height:400px; padding: 0; display: block;
+}
+
+/* in case script does not load */
+.cycle-slideshow img:first-child {
+    position: static; z-index: 100;
+}
+
+/* pager */
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; top: 10px; overflow: hidden;
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: #D69746;}
+.cycle-pager > * { cursor: pointer;}
+
+
+/* caption 
+
+*/
+.cycle-caption { position: absolute; color: white; bottom: 15px; right: 15px; z-index: 700; }
+
+
+
+/* overlay */
+.cycle-overlay { 
+    font-family: tahoma, arial;
+    position: absolute; bottom: 0; width: 100%; z-index: 600;
+    background: black; color: white; padding: 15px; opacity: .5;
+}
+
+
+/* prev / next links */
+.cycle-prev, .cycle-next { position: absolute; top: 0; width: 30%; opacity: 0; filter: alpha(opacity=0); z-index: 800; height: 100%; cursor: pointer; }
+.cycle-prev { left: 0;  background: url(http://malsup.github.com/images/left.png) 50% 50% no-repeat;}
+.cycle-next { right: 0; background: url(http://malsup.github.com/images/right.png) 50% 50% no-repeat;}
+.cycle-prev:hover, .cycle-next:hover { opacity: .7; filter: alpha(opacity=70) }
+
+.disabled { opacity: .5; filter:alpha(opacity=50); }
+
+
+/* display paused text on top of paused slideshow */
+.cycle-paused:after {
+    content: 'Paused'; color: white; background: black; padding: 10px;
+    z-index: 500; position: absolute; top: 10px; right: 10px;
+    border-radius: 10px;
+    opacity: .5; filter: alpha(opacity=50);
+}
+
+/* 
+    media queries 
+    some style overrides to make things more pleasant on mobile devices
+*/
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+    .cycle-slideshow { width: 200px;}
+    .cycle-overlay { padding: 4px }
+    .cycle-caption { bottom: 4px; right: 4px }
+   
+}
+
+table{align:center;}
+
+
+#loginbar{
+
+background-color: #FAFAFA;
+border-radius: 10px;
+height:110px;
+width:260px;
+padding-top: 20px;
+margin-top:10px;
+border:1px solid #AAAAAA;
+
+}
+
+#loginB{
+	
+	
+	
+}
+
+#singup{
+
+	font-size:9pt;
+	height: 30px;
+}
+
+#singup a{
+	
+	text-decoration:none;
+	color:#888888;
+	margin:0px 10px;
+	
+}
+
+#singup a:hover{
+	
+	font-weight: bolder;
+	
+}
+
+
+input[type="text"],
+input[type="password"]{
+
+
+background-color:white;
+height:30px;
+border-spacing:0px;border-style:none;padding:0px; margin-top:10px;
+margin:0px;
+padding:0px;
+border:1px solid #F1F1F1;
+
+}
+
+
+#recom{
+
+	width:400px;
+	height:400px;
+	border: 1px solid #051b45;
+	border-radius:10px;
+	margin-left:8px;
+}
+
+#recom h4{
+
+	
+	font-family:"돋움";
+	color:white;
+	background-color:#051b45;
+	height:50px;
+	width:390px;
+	font-size:17px;
+	margin-top:0px;
+	padding-top:15px;
+	padding-left:10px;
+	margin-bottom:5px;
+	border-radius:8px 8px 0px 0px;
+}
+
+/*top menu*/
+
+#login{
+		
+		background-color: red;
+	
+	}
+	
+	
+	#smallMenu td{
+	
+		border-spacing:0px;border-style:none;padding:0px;
+		border-cellapse:cellapse;
+		height:20px;
+		text-align:center;
+		border:none;
+		color:#BBBBBB;
+		border-right:1px solid #DDDDDD;
+	}
+	
+	#menubar{
+	
+		width:1500px;
+		background-color: #051b45;
+		border-radius: 30px;
+		margin:auto;
+		
+	}
+	
+	.menu{
+		width:350px;
+		height:40px;
+		text-align: center;
+		background-color: #051b45;
+		color: white;
+	}
+	
+	.menu a{
+	
+		text-decoration: none;
+		color:white;
+	}
+	
+	
+	/* 메인 아이템 css */
+
+
+	#item{
+	
+		display: inline-block;
+		width:160px;
+		height:140px;
+		border:1px solid gray;
+		
+	}
+	
+	
+	/* cource css*/
+	
+	.Courseitem{
+
+	display: inline-block;
+	margin:10px;
+	width:250px;
+	height:300px;
+	background-color:white;
+	border:1px solid gray;
+	border-radius: 30px;
+	
+}
+	
+	
+	
+#contentbar{
+
+	display: inline-block;
+	align:center;
+	width:1500px;
+	height:auto;
+	background-color: #fafafa;
+	border:1px solid #DDDDDD;
+	
+
+
+}
+
+#pageTitle{
+	
+	width:200px;
+	color:#D1D1D1;
+	font-size:40pt;
+	font-weight:bolder;
+	padding-bottom:10px;
+}
+
+#titleComment{
+
+
+	font-size:12pt;
+	color:#555555;
+	vertical-align: bottom;
+	padding-bottom:20px;
+	padding-left:20px;
+
+}
+
+
+
+
+
+/*write form*/
+
+
+#board{
+		aling:center;
+		text-align:center;
+		display:inline-block;
+		width:1500px;
+		height:auto;
+		border:1px solid #DDDDDD;
+		background-color: #fafafa;
+		
+		
+	}
+	
+	#boardTable{
+		
+		font-family:'돋움';
+		font-size:10pt;
+		color:#BBBBBB;
+		background-color : white;
+		border:1px solid #eeeeee;
+		width:800px;
+		height: auto;
+		margin-top:20px;
+		margin-bottom:20px;
+		margin-left:350px;
+	
+	
+	}
+	
+	
+	input[type="date"]{
+	
+		height:30px;
+	
+	}
+
+
+	#boardTable th{
+	
+		font-weight:none;
+		font-size:15px;
+		text-align:right;
+		color:#888888;
+		width:100px;
+	
+	}
+
+
+	#boardTable td{
+	
+		font-size:13pt;
+		padding-left:30px;
+		text-align:left;
+		color:#888888;
+		
+	}
+	
+	
+	
+	#Wtitle{
+	
+		width:650px;
+		height:30px;
+		font-size:13pt;	
+	
+	}
+	
+	
+	#Wcontent{
+	
+		width:650px;
+		height:400px;
+		font-size:13pt;	
+	
+	}
+	
+
+.writeB{
+
+	font-size:20px;
+	width:200px;
+	height: 50px;
+	text-decoration: none;
+	background-color:white;
+	border:2px solid #051b45;
+	outline:0;
+	color:#051b45;
+
+}
+
+.writeB:hover{
+
+	border: 2px solid #ffffff;
+	background-color: #051b45;
+	color:white;
+
+}
+
+/*signUp css*/
+
+
+#divSignUp{
+	
+	text-align:center;
+	
+	margin:auto;
+	margin-top:20px;
+	width:700px;
+	height:1000px;
+	
+	
+}
+
+#formSignUp{
+	
+	align:center;
+	text-align:center;
+	width:500px;
+	margin-top:10px;
+	margin-bottom:50px;
+
+	
+}
+
+
+#formSignUp th{
+	
+
+	text-decoration:underline;
+	
+	font-size:30pt;
+	font-weight:900;
+	letter-spacing: 10pt;
+
+	height: 70px;
+	
+	color:#bbbbbb;
+	
+	
+}
+
+
+
+#formSignUp td{
+	
+	min-height:100px;
+	height: 100px;
+	font-weight: bolder;
+	text-align: left;
+	color:#555555;
+	
+	
+}
+
+
+#formSignUp input[type=text]{
+	
+	
+	width:500px;
+	height:60px;
+	border:1px solid #cccccc;
+	
+	
+}
+
+#formSignUp input[type=checkbox]{
+	
+	width:20px;
+	height:20px;
+	font-size: 20pt;
+	line-height: 2em;
+	margin:10px 10px;
+	
+
+	
+}
+
+#formSignUp input[type=submit]{
+	
+	margin-top:50px;
+	
+}
+
+
+#logoimage{
+	
+	margin-top:50px;
+	width:300px;
+	height: 100px;
+	align:center;
+	
+}
+
+
+#signUpBar{
+	
+	background-color: #051b45;
+	width:100%;
+	height: 100px;
+	opacity: 5;
+
+	color:white;
+	
+	text-align: left;	
+}
+
+#signUpBar a{
+	
+	color:white;
+	text-decoration: none;
+	font-size: 15pt;
+	font-weight:900;
+	line-height: 5em;
+	margin:0px 50px;
+	
+	
+	
+}
+
+
+#like{
+	
+	font-size: 9pt;
+	color:#bbbbbb;
+	
+}
