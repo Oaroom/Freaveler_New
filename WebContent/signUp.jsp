@@ -38,28 +38,28 @@
 		<table id="formSignUp" align="center" >
 		
 			<tr>
-				<td><input type="text" placeholder="아이디" required></td>
+				<td><input type="text" name="id" placeholder="아이디" required></td>
 			</tr>
 			<tr>
-				<td><input type="text" placeholder="비밀번호" required></td>
+				<td><input type="text" name="pw" placeholder="비밀번호" required></td>
 			</tr>	
 			<tr>
-				<td><input type="text" placeholder="이름" required></td>
+				<td><input type="text"  name="name"placeholder="이름" required></td>
 			</tr>
 			<tr>
-				<td><input type="text" placeholder="생년월일 ex)000807" required></td>
+				<td><input type="text" name="birth" placeholder="생년월일 ex)000807" required></td>
 			</tr>
 			<tr>
 				<td>
 				<br>
 					* 좋아하는 국가 <label id="like"> <br>
 					여행지 추천에 사용되는 자료입니다</label> <br>
-					<input type="checkbox">아시아
-					<input type="checkbox">동남아
-					<input type="checkbox">유럽
-					<input type="checkbox">미주
-					<input type="checkbox">남태평양<br>
-					<input type="checkbox">대한민국
+					<input type="checkbox"  name="like" value="Asia">아시아
+					<input type="checkbox"  name="like" value="SEA">동남아
+					<input type="checkbox"  name="like" value="Europe">유럽
+					<input type="checkbox"  name="like" value="Americas">미주
+					<input type="checkbox"  name="like" value="Oceania">남태평양<br>
+					<input type="checkbox"  name="like" value="Korea">대한민국
 					
 				</td>
 			</tr>

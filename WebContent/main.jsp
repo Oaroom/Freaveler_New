@@ -72,10 +72,17 @@
 		<td  width="260px" height="110px">
 		
 			<div id="loginbar">
+			
+			<%
+			
+			String userId = (String)session.getAttribute("id");
+			
+			if(userId==null){ %>
+			<form action="login.jsp">
 			<table align="center" >
 				<tr>
 					<td >
-					<input type="text" placeholder="아이디">
+					<input type="text" name="userId" placeholder="아이디">
 					</td>
 					
 					<td rowspan="2">
@@ -84,7 +91,7 @@
 				</tr>
 				<tr>
 					<td>
-						<input type="text" placeholder="패스워드" >
+						<input type="text" name="userPw" placeholder="패스워드" >
 					</td>
 				</tr>
 				
@@ -103,6 +110,18 @@
 					
 				</tr>
 			</table>
+			</form>
+		<%	}else{ 
+			
+			%>
+			
+			<%=userId %>님 반갑습니다. <br>
+			<input type="button" value="로그아웃" id="logoutB">
+			
+			
+			<%
+			
+		} %>
 		 </div>
 		 
 		</td>
