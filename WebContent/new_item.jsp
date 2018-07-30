@@ -29,6 +29,7 @@ border-radius: 10px;
   -webkit-text-shadow: -1px 0 #555555, 0 1px #555555, 1px 0 #555555, 0 -1px #555555;
  
  overflow: hidden;
+ 
 }
 
 
