@@ -12,7 +12,6 @@ body{
 	
 		
 		align:center;
-		margin-left: 200px;
 		border-radius: 20px;
 	
 }
@@ -349,7 +348,6 @@ border:1px solid #F1F1F1;
 		height: auto;
 		margin-top:20px;
 		margin-bottom:20px;
-		margin-left:350px;
 	
 	
 	}
@@ -549,5 +547,55 @@ border:1px solid #F1F1F1;
 	
 	font-size: 9pt;
 	color:#bbbbbb;
+	
+}
+
+
+<!--메인 화면 최신 여행기록-->
+
+
+
+table #new{
+	
+	width:1500px;
+	height:500px;
+	
+}
+
+#new th{
+	
+	height:40px;
+	background-color: #243773;
+	color:white; 
+	padding-left:20px; 
+	font-weight: 900;
+	border-radius: 10px;
+	text-align: left;
+	
+
+}
+
+#new td{
+	
+	width:375px;
+	
+}
+
+
+
+<!-- 최신 여행기 아이템 css -->
+
+
+
+#mainCard{
+
+	width:400px;
+	height:500px;
+	background-color:red;
+}
+
+
+#subCard{
+	
 	
 }

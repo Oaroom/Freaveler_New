@@ -10,7 +10,7 @@
 <script src="http://malsup.github.com/jquery.cycle2.js"></script>
 
 
-<link rel="stylesheet" type="text/css" href="freaveler.css">
+<link rel="stylesheet" type="text/css" href="freaveler.css?after">
 
 </head>
 <body>
@@ -64,8 +64,6 @@
 			
 			</table>
 			
-			
-		
 		</div>
 		
 		</td>
@@ -79,6 +77,7 @@
 			
 			if(userId==null){ %>
 			<form action="login.jsp">
+			
 			<table align="center" >
 				<tr>
 					<td >
@@ -110,6 +109,7 @@
 					
 				</tr>
 			</table>
+			
 			</form>
 		<%	}else{ 
 			
@@ -129,14 +129,50 @@
 	
 	<tr>
 		<td>
+		 <!-- 광고콘텐츠 -->
 		</td>
 		<td>
-		
+		 <!-- 광고콘텐츠 -->
 		</td>
 	</tr>
 </table>
 
 	
+	
+<table id="new">
+	<tr>
+		<th colspan="4">
+			
+			>> 최신 여행기록
+		
+		</th>
+	</tr>
+	
+	<tr>
+		<td>
+	<jsp:include page="new_item.jsp"></jsp:include>
+		
+		</td>
+			<td>
+	<jsp:include page="new_item.jsp"></jsp:include>
+		
+		</td>
+			<td>
+	<jsp:include page="new_item.jsp"></jsp:include>
+		
+		</td>
+			<td>
+	<jsp:include page="new_item.jsp"></jsp:include>
+		
+		</td>
+		
+	</tr>
+	
+</table>
+
+
+
+
 
 </body>
 </html>

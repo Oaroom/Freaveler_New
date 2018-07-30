@@ -16,10 +16,10 @@
  
 
 </head>
-<body style="margin-left:300px;">
+<body style="margin: 0 auto;">
 
 
-<table width="1500px" ailgn="center">
+<table width="1500px" align="center">
 	
 	<tr>
 		<td>
