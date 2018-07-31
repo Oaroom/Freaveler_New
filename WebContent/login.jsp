@@ -18,8 +18,7 @@
 request.setCharacterEncoding("utf-8");
 
 String userId = request.getParameter("userId");
-String userPw = request.getParameter("userPW");
-
+String userPw = request.getParameter("userPw");
 
 //DB세팅
 String url="jdbc:mysql://localhost:3306/freaveler?serverTimezone=UTC";
@@ -34,16 +33,37 @@ try{
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection con = DriverManager.getConnection(url,user,pw);
 	
-	String sql = "select * from userinfo where userId=='"+userId+"'&& userPw=='"+userPw+"';";
+	Statement st = con.createStatement();
 	
-	PreparedStatement pstmt = con.prepareStatement(sql);
-	pstmt.setString(1,userId);
+
 	
-	rs = pstmt.executeQuery();
-	if(rs.next()){
+	
+	
+	
+	String sql = "select * from userinfo where userId ='"+userId+"' and userPw ='"+userPw+"'";
+	
+	
+	
+	st.executeQuery(sql);
+	rs = st.executeQuery(sql);
+	
+
+	Boolean isLogin = false;
+	
+	while(rs.next()){
 		
-		if(rs.getString(1).equals(userPw)){
+		isLogin = true;
+		
+		
+	}
+	
+	
+	
+	if(isLogin){
+		
+		
 			
+		
 			session.setAttribute("userId",userId);
 			
 			%>
@@ -55,29 +75,35 @@ try{
 			</script>
 			
 
-			<meta http-equiv="refresh" content="0;url=content.jsp">
+			<meta http-equiv="refresh" content="5;url=content.jsp">
 			
 			
 			<%
 			
-		}
-		else {
-	%>
+		
+		
+	}else {
+		
+		
+	
+		
+
+%>
+
+		<script type="text/javascript">
 			
-			<script type="text/javascript">
-				
-				alert("아이디와 비밀번호가 일치하지 않습니다");
-			</script>
+			out.println("아이디와 비밀번호가 일치하지 않습니다<br>userPw: ["+userPw+"]");
 			
-			<meta http-equiv="refresh" content="0;url=content.jsp">
-			
-			<%
-		}
+		</script>
+		
+		<meta http-equiv="refresh" content="5;url=content.jsp">
+		
+		<%
 	}
 	
 	
 	
-	
+
 	
 }catch(SQLException se){
 	

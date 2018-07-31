@@ -73,7 +73,7 @@
 			
 			<%
 			
-			String userId = (String)session.getAttribute("id");
+			String userId = (String)session.getAttribute("userId");
 			
 			if(userId==null){ %>
 			<form action="login.jsp">
@@ -116,8 +116,10 @@
 			%>
 			
 			<%=userId %>님 반갑습니다. <br>
-			<input type="button" value="로그아웃" id="logoutB">
 			
+			<form action="logout.jsp" method="post">
+				<input type="submit" value="로그아웃" id="logoutB">
+			</form>
 			
 			<%
 			

@@ -15,8 +15,35 @@
 <link rel="stylesheet" type="text/css" href="freaveler.css">
  
 
+<style>
+
+
+ </style>
+ 
 </head>
-<body style="margin: 0 auto;">
+<body>
+
+<div id="topMenu">
+
+	<table>
+		<tr>
+			<td>
+				프리빌러란?
+			</td>
+			<td>
+				버그 신고
+			</td>
+			<td>
+				협찬 문의
+			</td>
+			<td>
+				
+			</td>
+		</tr>
+	</table>
+
+</div>
+
 
 
 <table width="1500px" align="center">

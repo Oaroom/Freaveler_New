@@ -8,6 +8,36 @@ body{
 	
 }
 
+#topMenu{
+
+width:100%;
+height: 40px;
+background-color: #f0f0f0;
+
+}
+
+#topMenu table{
+	
+	color:#bbbbbb;
+	padding:5px;
+
+	
+}
+
+#topMenu table td{
+	
+	border-left:1px solid #bbbbbb;
+	width:150px;
+	height:25px;
+	text-align:center;
+}
+
+#topMenu table td:hover{
+	
+	font-weight: 900;
+}
+
+
 #topBody{
 	
 		
@@ -232,6 +262,12 @@ border:1px solid #F1F1F1;
 		border-right:1px solid #DDDDDD;
 	}
 	
+	#smallMenu td:hover{
+	
+		font-weight: 900;
+	}
+	
+	
 	#menubar{
 	
 		width:1500px;
@@ -241,11 +277,18 @@ border:1px solid #F1F1F1;
 		
 	}
 	
+	
+	#menubar table td:hover{
+	
+		font-weight: 900;
+	
+	}
+	
 	.menu{
 		width:350px;
 		height:40px;
 		text-align: center;
-		background-color: #051b45;
+		background-color: c;
 		color: white;
 	}
 	
@@ -267,6 +310,15 @@ border:1px solid #F1F1F1;
 		border:1px solid gray;
 		
 	}
+	
+	
+	#item:hover{
+	
+		background-color:black;
+		opacity: 0.1;
+		
+	}
+	
 	
 	
 	/* cource css*/
@@ -296,6 +348,25 @@ border:1px solid #F1F1F1;
 	
 
 
+}
+
+
+#contentbar table th{
+	
+	
+	background-color: #243773;
+	height:50px;
+	
+	font-size:15pt;
+	color:white;
+	font-weight: 900;
+	
+	text-align:left;
+	
+	padding-left:30px;
+	
+	
+	
 }
 
 #pageTitle{
@@ -599,3 +670,74 @@ table #new{
 	
 	
 }
+
+
+<!-- course 부분 추천 카테고리 css-->
+
+#groupB{
+	
+	width:1500px;
+	height:100px;
+	border:3px solid #dddddd;
+	border-radius: 30px;
+	
+}
+
+	
+.courseB{
+	
+	
+	width:200px;
+	height: 50px;
+	border : 1px solid #dadada;
+	border-radius: 50px;
+	background-color: yello;
+	
+	float: left;
+	display: inline-block;
+	
+	margin:10px;
+	
+	text-align: center;
+	line-height: 3em;
+	
+	font-weight: 500;
+	
+	
+}
+	
+	
+.courseB:hover{
+
+	
+	background-color:#243773;
+	color:white;	
+	
+}
+	
+	
+	
+	
+	
+	
+	/* stay_item css */
+	
+	
+	#stay_item{
+	
+	
+	width:1000px;
+	height:100px;
+	
+	border:1px solid #444444;
+	
+	background-color:#dadada;
+	
+	}
+	
+	
+	
+	
+	
+	
+	
