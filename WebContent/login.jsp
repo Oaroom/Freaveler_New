@@ -75,7 +75,7 @@ try{
 			</script>
 			
 
-			<meta http-equiv="refresh" content="5;url=content.jsp">
+			<meta http-equiv="refresh" content="0;url=content.jsp">
 			
 			
 			<%

@@ -54,12 +54,12 @@
 				<br>
 					* 좋아하는 국가 <label id="like"> <br>
 					여행지 추천에 사용되는 자료입니다</label> <br>
-					<input type="checkbox"  name="like" value="Asia">아시아
-					<input type="checkbox"  name="like" value="SEA">동남아
-					<input type="checkbox"  name="like" value="Europe">유럽
-					<input type="checkbox"  name="like" value="Americas">미주
-					<input type="checkbox"  name="like" value="Oceania">남태평양<br>
-					<input type="checkbox"  name="like" value="Korea">대한민국
+					<input type="checkbox"  name="like" value="아시아">아시아
+					<input type="checkbox"  name="like" value="동남아">동남아
+					<input type="checkbox"  name="like" value="유럽">유럽
+					<input type="checkbox"  name="like" value="미주">미주
+					<input type="checkbox"  name="like" value="남태평양">남태평양<br>
+					<input type="checkbox"  name="like" value="대한민국">대한민국
 					
 				</td>
 			</tr>

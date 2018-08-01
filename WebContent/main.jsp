@@ -115,12 +115,16 @@
 			
 			%>
 			
-			<%=userId %>님 반갑습니다. <br>
+			<div id="loginInfo">
 			
-			<form action="logout.jsp" method="post">
-				<input type="submit" value="로그아웃" id="logoutB">
-			</form>
-			
+				<b><%=userId %></b>님 <br>
+				
+				
+				<form action="logout.jsp" method="post">
+					<input type="submit" value="로그아웃" id="logoutB">
+				</form>
+		
+			</div>
 			<%
 			
 		} %>

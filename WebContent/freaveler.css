@@ -391,6 +391,53 @@ border:1px solid #F1F1F1;
 
 
 
+.dayBox{
+	
+	border:1px solid #dadada;
+	border-radius:30px;
+	width:730px;
+	min-height: 200px;
+	
+}
+
+
+#dayButtonBox{
+	
+	
+	width:700px;
+	margin:10px;
+	
+}
+
+
+#dayButtonBox input[type=button]{
+	
+	border:3px solid #dadada;
+	border-radius:10px;
+	
+	background-color: white;
+	
+	color:#dadada;
+	font-weight: bolder;
+	
+}
+
+#dayButtonBox input[type=button]:hover{
+	
+	
+	background-color: #dadada;
+	
+	color:white;
+	
+}
+
+#dayButtonBox th{
+	
+	
+	width:500px;
+	
+}
+
 
 
 /*write form*/
@@ -401,7 +448,10 @@ border:1px solid #F1F1F1;
 		text-align:center;
 		display:inline-block;
 		width:1500px;
-		height:auto;
+		min-height: 100px;
+		overflow:hidden;
+        height:auto;
+		
 		border:1px solid #DDDDDD;
 		background-color: #fafafa;
 		
@@ -410,13 +460,16 @@ border:1px solid #F1F1F1;
 	
 	#boardTable{
 		
+		
+		align:center;
 		font-family:'돋움';
 		font-size:10pt;
 		color:#BBBBBB;
 		background-color : white;
 		border:1px solid #eeeeee;
 		width:800px;
-		height: auto;
+		overflow:hidden;
+        height:auto;
 		margin-top:20px;
 		margin-bottom:20px;
 	
@@ -719,6 +772,60 @@ table #new{
 	
 	
 	
+#courseBox{
+	
+	margin:auto;
+
+	font-family:'맑은 고딕';
+	font-size:10pt;
+	color:#BBBBBB;
+	
+	background-color : white;
+	border:1px solid #eeeeee;
+	
+	width:770px;
+	min-height: 450px;
+	
+	overflow:hidden;
+    height:auto;
+	
+	margin-top:20px;
+	margin-bottom:20px;
+	
+	padding-left:30px;
+	padding-bottom:50px;
+
+}
+
+#courseBox h1{
+	
+	
+	text-align:left;
+	
+}
+
+#plusB{
+	
+	
+	margin-top:20px;
+	margin-left:-40px;
+	width:700px;
+	height:50px;
+	border : 1px solid #243773;
+	border-radius : 50px;
+	background-color: #243773;
+	
+	color:white;
+	font-family:'맑은 고딕';
+	font-size: 15pt;
+	font-weight: 900;
+	line-height: -2em;
+	
+	
+	
+	
+}
+
 	
 	/* stay_item css */
 	
@@ -736,6 +843,14 @@ table #new{
 	}
 	
 	
+	
+	/*loginInfo css*/
+	
+	#loginInfo{
+	
+	border:1px solid #dddddd;
+	
+	}
 	
 	
 	
