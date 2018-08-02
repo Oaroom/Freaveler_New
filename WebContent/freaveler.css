@@ -395,7 +395,7 @@ border:1px solid #F1F1F1;
 	
 	border:1px solid #dadada;
 	border-radius:30px;
-	width:730px;
+	width:830px;
 	min-height: 200px;
 	
 }
@@ -404,7 +404,7 @@ border:1px solid #F1F1F1;
 #dayButtonBox{
 	
 	
-	width:700px;
+	width:800px;
 	margin:10px;
 	
 }
@@ -434,9 +434,131 @@ border:1px solid #F1F1F1;
 #dayButtonBox th{
 	
 	
-	width:500px;
+	width:600px;
+
 	
 }
+
+
+.end{
+
+margin:auto;
+width:700px;
+height: 20px;
+border:2px solid #243773;
+border-radius: 20px;
+background-color :#243773;
+color:white;
+font-weight: 900;
+margin-bottom:20px;
+
+
+}
+
+
+/* course 내부 아이템 css */
+
+
+#placeForm{
+
+	font-family: '맑은고딕';
+	width:800px;
+	margin:10px;
+	margin-bottom: 20px;
+	
+	
+}
+
+#placeForm th{
+
+
+	font-weight: normal;
+	font-size:15px;
+	
+}
+
+
+
+#placeForm img{
+
+width:60px; height: 60px;
+margin-right: 10px; 
+vertical-align: top;
+}
+
+
+
+#placeName{
+
+	width:80px;
+	height: 20px;
+	
+	padding:10px;
+	
+	border:1px solid #dadada;
+	border-radius: 10px;
+
+	font-size: 12pt;
+	
+}
+
+#placeTime{
+
+	width:130px;
+	height: 20px;
+	
+	padding:10px;
+	
+	border:1px solid #dadada;
+	border-radius: 10px;
+
+	font-size: 12pt;
+}
+
+#placeMoney{
+
+	width:80px;
+	height: 20px;
+	
+	padding:10px;
+	
+	border:1px solid #dadada;
+	border-radius: 10px;
+
+	font-size: 12pt;
+}
+
+#placeStar{
+
+	width:50px;
+	height: 20px;
+	
+	padding:10px;
+	
+	border:1px solid #dadada;
+	border-radius: 10px;
+
+	font-size: 12pt;
+}
+
+#placeReview{
+	
+	
+	width:700px;
+	height: 100px;
+	
+	padding:10px;
+	
+	border:1px solid #dadada;
+	border-radius: 10px;
+
+	font-size: 12pt;
+
+	vertical-align: top;
+
+}
+
+
 
 
 
@@ -467,7 +589,7 @@ border:1px solid #F1F1F1;
 		color:#BBBBBB;
 		background-color : white;
 		border:1px solid #eeeeee;
-		width:800px;
+		width:900px;
 		overflow:hidden;
         height:auto;
 		margin-top:20px;
@@ -490,7 +612,7 @@ border:1px solid #F1F1F1;
 		font-size:15px;
 		text-align:right;
 		color:#888888;
-		width:100px;
+		width:200px;
 	
 	}
 
@@ -508,7 +630,7 @@ border:1px solid #F1F1F1;
 	
 	#Wtitle{
 	
-		width:650px;
+		width:750px;
 		height:30px;
 		font-size:13pt;	
 	
@@ -517,7 +639,7 @@ border:1px solid #F1F1F1;
 	
 	#Wcontent{
 	
-		width:650px;
+		width:750px;
 		height:400px;
 		font-size:13pt;	
 	
@@ -527,7 +649,7 @@ border:1px solid #F1F1F1;
 .writeB{
 
 	font-size:20px;
-	width:200px;
+	width:300px;
 	height: 50px;
 	text-decoration: none;
 	background-color:white;
@@ -783,7 +905,7 @@ table #new{
 	background-color : white;
 	border:1px solid #eeeeee;
 	
-	width:770px;
+	width:870px;
 	min-height: 450px;
 	
 	overflow:hidden;
