@@ -13,30 +13,16 @@
 
 	
 	// 총 몇개의 일정이 있는지 카운트
-	int count=0;
+	int count=1;
 
-	while(request.getParameter("placeName"+count+1) != null){
+ 	while(request.getParameter("placeName"+count) != null){
 		
 		count++;
 		
 	}
-	
-	out.println(count);
-	
-	
-	/*
-	
-		post로 넘겨지는 name 값에  개수를 세서 id 값을 붙임
-		받아오는 과정에서 문제 발생
-		>> 오류해결 해애함
-
-		다음날 일차 추가하는 기능
-		>>> DB연결 까지 
-	
-	*/
-	
-	/*
-	
+	 
+ 
+ 	
 	
 	
 	//일정을 순서대로 담을 2차원 배열 선언
@@ -46,24 +32,25 @@
 	
 	
 	
-	out.println("~~!!!!~");
+
 	
 	
 	
-	for(int i = 0 ; i < count ; i++){
+	for(int i = 1 ; i < count ; i++){
 		
-		out.println("~~~");
+	
+		
+		for(int j = 0 ; j < 4 ; j++){
+			
+			
+			out.println(request.getParameter("place"+title[j]+i));
+			
+		}
+		
 		
 	}
 	
-	for(int j = 0 ; j < 4 ; j++){
-		
-		
-		
-		out.println(request.getParameter("place"+title[j]+0+1));
-		
-	}
-	*/
+	
 	
 	
 	
