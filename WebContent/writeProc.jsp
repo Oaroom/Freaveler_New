@@ -17,6 +17,7 @@
 
 
 var count;
+var type;
 
 window.onload=function(){
 	
@@ -46,7 +47,6 @@ function addInput(check) {
  
 function display(check) {
   
- 
     document.getElementById('parah').innerHTML+=createInput(count,check);
     
   
@@ -58,17 +58,17 @@ function createInput(id,check) {
 	
 	
 	switch (check) {
-	case 0: ++count; return "  <table id='placeForm' border='0'><tr style='height: 50px;'><td rowspan='4' style='vertical-align: top'><img src='img/place.png'/></td><th>장소명</th><td><input type='text' name='placeName"+id+"' id='placeName' placeholder='오사카성'/></td><th>시간</th><td><input type='time' name='placeTime"+id+"' id='placeTime'/></td><th>입장료</th><td><input type='text' name='placeMoney"+id+"' id='placeMoney' placeholder='352,000원'/></td><th>별점</th><td><input type='number' name='placeStar"+id+"' id='placeStar' placeholder='5.0'/></td></tr><tr><td colspan='9'><input type='text' name='placeReview"+id+"' id='placeReview' placeholder='이곳에서 무엇을 하고 왔나요?'/></td></tr></table>";
+	case 0: ++count; return "<input type='hidden' name='place"+count+"'><table id='placeForm' border='0'><tr style='height: 50px;'><td rowspan='4' style='vertical-align: top'><img src='img/place.png'/></td><th>장소명</th><td><input type='text' name='placeName"+id+"' id='placeName' placeholder='오사카성' required /></td><th>시간</th><td><input type='time' name='placeTime"+id+"' id='placeTime' required/></td><th>입장료</th><td><input type='text' name='placeMoney"+id+"' id='placeMoney' placeholder='352,000원'required/></td><th>별점</th><td><input type='number' name='placeStar"+id+"' id='placeStar' placeholder='5.0' required/></td></tr><tr><td colspan='9'><input type='text' name='placeReview"+id+"' id='placeReview' placeholder='이곳에서 무엇을 하고 왔나요?' required /></td></tr></table>";
 	
 		break;
 
-	case 1: ++count; return " <table id='placeForm'><tr style='height: 50px;'><td rowspan='4' style='vertical-align: top'><img src='img/food.png'/></td><th>장소명</th><td><input type='text' name='placeName"+id+"' id='placeName' placeholder='이치란라멘'/></td><th>시간</th><td><input type='time' name='placeTime"+id+"' id='placeTime'/></td><th>가격</th><td><input type='text' name='placeMoney"+id+"' id='placeMoney' placeholder='352,000원'/></td><th>별점</th><td><input type='number' name='placeStar"+id+"' id='placeStar' placeholder='5.0'/></td></tr><tr><td colspan='9'><input type='text' name='placeReview"+id+"' id='placeReview' placeholder='음식의 맛은 어땠나요?'/></td></tr></table>";
+	case 1: ++count; return "<input type='hidden' name='food"+count+"'><table id='placeForm'><tr style='height: 50px;'><td rowspan='4' style='vertical-align: top'><img src='img/food.png'/></td><th>장소명</th><td><input type='text' name='placeName"+id+"' id='placeName' placeholder='이치란라멘' required /></td><th>시간</th><td><input type='time' name='placeTime"+id+"' id='placeTime' required/></td><th>가격</th><td><input type='text' name='placeMoney"+id+"' id='placeMoney' placeholder='352,000원'required/></td><th>별점</th><td><input type='number' name='placeStar"+id+"' id='placeStar' placeholder='5.0' required/></td></tr><tr><td colspan='9'><input type='text' name='placeReview"+id+"' id='placeReview' placeholder='음식의 맛은 어땠나요?' required/></td></tr></table>";
 		break;
 		
-	case 2: ++count; return " <table id='placeForm'><tr style='height: 50px;'><td rowspan='4' style='vertical-align: top'><img src='img/stay.png'/></td><th>장소명</th><td><input type='text' name='placeName"+id+"' id='placeName' placeholder='헬로호텔'/></td><th>시간</th><td><input type='time' name='placeTime"+id+"' id='placeTime'/></td><th>비용</th><td><input type='text' name='placeMoney"+id+"' id='placeMoney' placeholder='352,000원'/></td><th>별점</th><td><input type='number' name='placeStar"+id+"' id='placeStar' placeholder='5.0'/></td></tr><tr><td colspan='9'><input type='text' name='placeReview"+id+"' id='placeReview' placeholder='잠자리는 편안했나요?'/></td></tr></table>";
+	case 2: ++count; return  "<input type='hidden' name='stay"+count+"'><table id='placeForm'><tr style='height: 50px;'><td rowspan='4' style='vertical-align: top'><img src='img/stay.png'/></td><th>장소명</th><td><input type='text' name='placeName"+id+"' id='placeName' placeholder='헬로호텔' required/></td><th>시간</th><td><input type='time' name='placeTime"+id+"' id='placeTime' required/></td><th>비용</th><td><input type='text' name='placeMoney"+id+"' id='placeMoney' placeholder='352,000원'required/></td><th>별점</th><td><input type='number' name='placeStar"+id+"' id='placeStar' placeholder='5.0' required/></td></tr><tr><td colspan='9'><input type='text' name='placeReview"+id+"' id='placeReview' placeholder='잠자리는 편안했나요?' required/></td></tr></table>";
 
 		break;
-	case 3: return " <div class='end'> <input type='hidden' name=end'"+count+"'>오늘 하루는 여기까지! 수고했어요 :-) </div>";
+	case 3: return " <div class='end'> <input type='hidden' name=end"+count+">오늘 하루는 여기까지! 수고했어요 :-) </div>";
 
 	break;
 
@@ -94,11 +94,6 @@ function plus(){
 </script>
 
 
-<style type="text/css">
-
-
-</style>
-
 </head>
 <body align="center">
 
@@ -115,7 +110,7 @@ function plus(){
 				 제목
 				</th>
 				<td>
-					<input type="text" id="Wtitle" placeholder="제목">
+					<input type="text" name="cTitle" id="cTitle" placeholder="제목">
 				</td>
 			</tr>
 			
@@ -126,10 +121,33 @@ function plus(){
 				
 				</th>
 				<td>
-					<input type="date" value="출발날짜" placeholder="출발날짜">에서  <input type="date" placeholder="도착날짜">까지
+					<input type="date" name="startD" value="출발날짜" placeholder="출발날짜">에서  <input type="date" name="endD" placeholder="도착날짜">까지
 					
 				</td>
 			</tr>
+			
+			<tr>
+				<th>
+				
+				분류
+				
+				</th>
+				<td>
+					<select name="type">
+						<option value="">선택</option>
+				 		<option value="국내">국내</option>
+					  	<option value="아시아">아시아</option>
+					  	<option value="동남아" >동남아</option>
+					  	<option value="유럽" >유럽</option>
+					  	<option value="미주">미주</option>
+					  	<option value="남태평양" >남태평양</option>
+					  	<option value="아프리카" >아프리카</option>
+					</select>
+			
+				</td>
+			</tr>
+			
+			
 			
 			<tr>
 				<th>
@@ -138,7 +156,9 @@ function plus(){
 				
 				</th>
 				<td>
-					<input type="text"  placeholder="일본">의 	<input type="text" placeholder="오사카"> 
+					
+					<input type="text" name="place1" placeholder="일본">의 	<input type="text" name="place2"placeholder="오사카"> 
+				
 				</td>
 			</tr>
 	
@@ -148,7 +168,7 @@ function plus(){
 		<div id="courseBox">
 		
 		
-			<h1> 나의 일정을 나눠보세요 </h1> 
+			<h1> 나의 여행을 나눠보세요 </h1> 
 			<h3 style="text-align: left"> 우측의 세 개의 버튼을 통해서 일정을 짤 수 있습니다. </h3>
 			<h3 style="text-align: left"> 하루 일정이 끝나면 '하루끝' 버튼으로 표시하세요!</h3> </h3>
 			
@@ -183,7 +203,7 @@ function plus(){
 				
 			</div> <!-- end of daybox -->
 			
-			<input type="submit" id="plusB" value="일정 공유하기" style=" margin-top:10px; margin-bottom:10px;">			
+			<input type="submit" id="plusB" value="여행 나누기" style=" margin-top:10px; margin-bottom:10px;">			
 		</div>
 		
 		

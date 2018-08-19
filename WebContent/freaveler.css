@@ -8,6 +8,7 @@ body{
 	
 }
 
+
 #topMenu{
 
 width:100%;
@@ -212,7 +213,7 @@ height:30px;
 border-spacing:0px;border-style:none;padding:0px; margin-top:10px;
 margin:0px;
 padding:0px;
-border:1px solid #F1F1F1;
+border:1px solid #dfdfdf;
 
 }
 
@@ -323,18 +324,86 @@ border:1px solid #F1F1F1;
 	
 	/* cource css*/
 	
-	.Courseitem{
+	
+	#courseFrame{
+	
+		width:1500px;
+		min-height: 300px;
+		display: inline-block;
+		overflow: hidden;
+	
+		border:1px solid blue;
+	}
+	
 
+	.Courseitem{
+	
+
+	text-align:center;
+	
 	display: inline-block;
-	margin:10px;
+	float: left;
+	
+	margin:22px;
+	
+	
 	width:250px;
 	height:300px;
+	
 	background-color:white;
-	border:1px solid gray;
+	border:1px solid #bbbbbb;
 	border-radius: 30px;
 	
 }
 	
+	
+.Courseitem table{
+	
+	width:230px;
+	height: 290px;
+	
+	
+	
+}
+	
+
+
+
+	
+	.itemTitle{
+	
+		color:#ababab;
+		font-size:13pt;
+		font-weight: 900;
+	}
+	
+	.country{
+	
+		height:50px;
+	
+		font-size : 20pt;
+		font-weight:900;
+		color:#243773;
+		
+		border-bottom: 1px solid #bbbbbb;
+	}
+	
+	.number{
+	
+		
+		height:10px;
+
+		
+		text-align:left;	
+		font-size:15pt; 
+		font-weight:900;
+		color:#bbbbbb;	
+		
+	
+	
+	
+	
+	}
 	
 	
 #contentbar{
@@ -351,15 +420,16 @@ border:1px solid #F1F1F1;
 }
 
 
-#contentbar table th{
+#wframe th{
 	
 	
 	background-color: #243773;
 	height:50px;
 	
 	font-size:15pt;
-	color:white;
 	font-weight: 900;
+	
+	color:white;
 	
 	text-align:left;
 	
@@ -605,6 +675,16 @@ vertical-align: top;
 	
 	}
 
+	#boardTable select{
+	
+		height:30px;
+	
+	}
+	
+	#boardTable input{
+	
+		border:1px solid #bbbbbb;
+	}
 
 	#boardTable th{
 	
@@ -628,9 +708,9 @@ vertical-align: top;
 	
 	
 	
-	#Wtitle{
+	#cTitle{
 	
-		width:750px;
+		width:550px;
 		height:30px;
 		font-size:13pt;	
 	
@@ -796,6 +876,10 @@ vertical-align: top;
 	
 }
 
+<!--로그아웃 css-->
+
+
+
 
 <!--메인 화면 최신 여행기록-->
 
@@ -808,8 +892,18 @@ table #new{
 	
 }
 
+
+#none{
+
+align:center;
+text-align: center;
+color:#959595;
+	
+}
+
 #new th{
 	
+	width:1500px;
 	height:40px;
 	background-color: #243773;
 	color:white; 
@@ -829,22 +923,6 @@ table #new{
 
 
 
-<!-- 최신 여행기 아이템 css -->
-
-
-
-#mainCard{
-
-	width:400px;
-	height:500px;
-	background-color:red;
-}
-
-
-#subCard{
-	
-	
-}
 
 
 <!-- course 부분 추천 카테고리 css-->
@@ -950,17 +1028,28 @@ table #new{
 
 	
 	/* stay_item css */
+	#stayForm{
 	
 	
-	#stay_item{
+	width:1500px;
+	min-height: 300px;
 	
+	}
 	
-	width:1000px;
-	height:100px;
+	.stayItem{
 	
-	border:1px solid #444444;
+	display:inline-block;
+	float:left;
 	
-	background-color:#dadada;
+	margin:20px;
+	
+	width:700px;
+	height:200px;
+	
+	border:1px solid #d9d9d9;
+	border-radius:30px;
+	
+	background-color:#fafafa;
 	
 	}
 	
@@ -976,5 +1065,79 @@ table #new{
 	
 	
 	
+	/* stay writing form css*/
 	
+	
+	#recomBox{
+	
+		margin:auto;
+	
+		font-family:'맑은 고딕';
+		font-size:12pt;
+		color:#6a6a6a;
+		
+		background-color : white;
+		border:1px solid #eeeeee;
+		
+		width:1000px;
+		min-height: 450px;
+		
+		overflow:hidden;
+	    height:auto;
+		
+		margin-top:20px;
+		margin-bottom:20px;
+		
+		
+		padding-bottom:50px;
+		
+		
+	}
+	
+	
+	
+	
+	#recomTable{
+	
+		width:650px;
+		text-align: left;
+	
+	
+		background-color: #fafafa;
+		border:1px solid #eaeaea;
+		border-radius: 10px;
+		
+		padding:20px;
+	}
+	
+	#recomTable th{
+	
+		width:80px;
+		text-align: center;
+	}
+	
+	
+	
+	#recomBox input[type=text], input[type=number]{
+	
+		height: 30px;
+		border:1px solid #dadada;
+		border-radius: 20px;
+		margin:10px;
+		padding-left:5px;
+	
+	}
+	
+	#stayName{
+	
+		width:500px;
+	
+	}
+	
+	#stayRecom, #stayBad{
+	
+		width:600px;
+		min-height: 100px;
+		
+	}
 	

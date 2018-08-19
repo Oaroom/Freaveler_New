@@ -47,7 +47,7 @@ for(int i=0 ; i < Like.length ; i++){
 	
 }
 
-String url="jdbc:mysql://localhost:3306/freaveler?serverTimezone=UTC";
+String url="jdbc:mysql://localhost:3306/freaveler?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8";
 String user="root";
 String pw="43176634";
 

@@ -70,7 +70,7 @@
 			<td class="menu"> <a href="content.jsp"> HOME </a> </td>
 			<td class="menu"> <a href="course.jsp"> COURSE </a> </td>
 			<td class="menu"> <a href="stay.jsp"> STAY </a> </td>
-			<td class="menu"> <a href="#"> FOOD </a> </td>
+			<td class="menu"> <a href="mypage.jsp"> MY PAGE </a> </td>
 		</tr>
 	</table>
 	

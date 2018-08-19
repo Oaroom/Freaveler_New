@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+     <%@page import="java.sql.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -31,6 +32,25 @@
 
 </head>
 <body>
+
+
+<% 
+
+
+
+	// 데이터베이스 세팅
+	
+
+	String url="jdbc:mysql://localhost:3306/freaveler?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8";
+	String user="root";
+	String pw="43176634";
+
+
+
+%>
+
+
+
 
 <table width="1500px">
 		<tr>
@@ -110,10 +130,10 @@
 	
 <div id="contentbar">
 
-<table width="1500px"  style="aling:center; text-align: center">
+<table width="1500px"  style="aling:center; text-align: center" id="wframe">
 		
 		<tr>
-			<th colspan="4">
+			<th>
 			
 				>> 여행기록 보기
 			
@@ -123,40 +143,111 @@
 		<tr>
 		
 			<td>
-				<jsp:include page="course_item.jsp"></jsp:include>
+				<div id="coureFrame">
+				
+				
+				<% 
+					
+				Statement stmt = null;
+				ResultSet rs = null;
+				
+								
+				
+				try{
+					
+					Class.forName("com.mysql.jdbc.Driver");
+					//out.println("드라이버 로드 완료");
+					//mysql 접속
+					
+					Connection con = DriverManager.getConnection(url,user,pw);
+					
+					stmt= con.createStatement();
+					
+					String query = "select * from course order by id desc";
+					
+					rs = stmt.executeQuery(query);	
+					
+					rs.last();
+					rs.previous();
+					
+					if(rs.getRow()==0){
+						
+						
+						%>
+						
+						<h1 id="none"> 아직 작성된 여행기가 없습니다 ㅜ,ㅜ </h1>
+						
+						<%
+						
+						
+					}else{
+					
+					rs.first();
+					rs.previous();
+					
+					while(rs.next()){
+						
+						
+						
+							%>
+					<div class="Courseitem" onclick ="location.href='show.jsp?id=<%= rs.getString(1)%>'">
+					
+						
+							<table align="center">
+								<tr>
+									<td class="country">
+										<%= rs.getString(7)  %>
+									</td>
+								</tr>
+								<tr>
+									<td class="itemTitle">
+									<%= rs.getString(3) %> 
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 
+									</td>
+								</tr>
+								<tr>
+									<td  class="number">
+									No.<%= rs.getString(1) %> 
+									</td>
+								</tr>
+							
+								
+							</table>
+					
+					</div>
+					
+				
+				<%
+					
+					
+					}
+					
+					}
+					
+					
+				}catch(ClassNotFoundException e){
+					
+					//out.println("드라이버가 없어요");
+					
+				}catch(SQLException se){
+					
+					 se.printStackTrace();
+					out.println(se);
+					
+				}
+				
+		%>
+					
+				
+				
+				</div>
+				
 			</td>
 			
-			<td>
-				<jsp:include page="course_item.jsp"></jsp:include>
-			</td>
-		
-			<td>
-				<jsp:include page="course_item.jsp"></jsp:include>
-			</td>
-		
-			<td>
-				<jsp:include page="course_item.jsp"></jsp:include>
-			</td>
-		
-		</tr>
-		
-		<tr>
-		
-			<td>
-				<jsp:include page="course_item.jsp"></jsp:include>
-			</td>
-			
-			<td>
-				<jsp:include page="course_item.jsp"></jsp:include>
-			</td>
-		
-			<td>
-				<jsp:include page="course_item.jsp"></jsp:include>
-			</td>
-		
-			<td>
-				<jsp:include page="course_item.jsp"></jsp:include>
-			</td>
 		
 		</tr>
 		

@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@page import="java.sql.*"%>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,10 +16,122 @@
 
 <link rel="stylesheet" type="text/css" href="freaveler.css?after">
 
+
+
+<style>
+
+
+.mainCard{
+
+
+display:inline-block;
+float:left;
+
+width:350px;
+height:250px;
+margin-top:10px;
+margin:10px;
+border:1px solid #aaaaaa;
+border-radius: 10px;
+
+ position:relative;
+ 
+ 
+  text-shadow: -1px 0 #555555, 0 1px #555555, 1px 0 #555555, 0 -1px #555555;
+  -moz-text-shadow: -1px 0 #555555, 0 1px #555555, 1px 0 #555555, 0 -1px #555555;
+  -webkit-text-shadow: -1px 0 #555555, 0 1px #555555, 1px 0 #555555, 0 -1px #555555;
+ 
+ overflow: hidden;
+ 
+}
+
+
+.subCard{
+
+
+position:absolute;
+
+top:150px; left:-1px;
+
+width:350px;
+height:110px;
+border:1px solid #aaaaaa;
+border-radius: 10px;
+
+position:absolute;
+ 
+
+ overflow: hidden;
+ opacity: 0.8;
+ 
+ color:#fdfdfd;
+ 
+ -webkit-transition-duration:1s, 1s;
+ -moz-transition-duration:1s, 1s;
+ transition-duration: 1s,1s;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius:  10px;
+
+
+}
+
+
+
+.subCard:hover{
+
+    top:50px; left:-1px;
+    height:200px;
+    color:#ffffff;
+    background-color: #444444;
+
+
+
+}
+
+
+
+
+</style>
+
+
+
 </head>
 <body>
 
+<% 
 
+
+request.setCharacterEncoding("utf-8");
+
+String url="jdbc:mysql://localhost:3306/freaveler?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8";
+String user="root";
+String pw="43176634";
+
+
+
+Statement stmt = null;
+ResultSet rs = null;
+
+				
+
+try{
+	
+	Class.forName("com.mysql.jdbc.Driver");
+	//out.println("드라이버 로드 완료");
+	//mysql 접속
+	
+	Connection con = DriverManager.getConnection(url,user,pw);
+	
+	stmt= con.createStatement();
+	
+	String query = "select * from course order by id desc";
+	
+	rs = stmt.executeQuery(query);	
+	
+	
+
+
+%>
 
 <table width="1500px" align="center">
 	<tr>
@@ -155,29 +271,74 @@
 	</tr>
 	
 	<tr>
-		<td>
-	<jsp:include page="new_item.jsp"></jsp:include>
+	<td>
+	
+		<%
 		
-		</td>
-			<td>
-	<jsp:include page="new_item.jsp"></jsp:include>
+		rs.last();
+		rs.previous();
 		
-		</td>
-			<td>
-	<jsp:include page="new_item.jsp"></jsp:include>
+		if(rs.getRow()==0){
+			
+			
+			%>
+			
+			<h1 id="none"> 아직 작성된 여행기가 없습니다 ㅜ,ㅜ </h1>
+			
+			<%
+			
+			
+		}else{
 		
-		</td>
-			<td>
-	<jsp:include page="new_item.jsp"></jsp:include>
+		rs.first();
+		rs.previous();
 		
-		</td>
+		for(int i = 0 ; i < 4 ; i++){
 		
+				if(rs.next() == false) break;
+		
+		%>
+		
+			
+			<div class="mainCard">
+			
+			<%= rs.getString(3) %>
+			
+				<div class="subCard">
+				
+					랄랄라
+				
+				</div>
+			
+			</div>
+	<%
+	
+	}
+		%>
 	</tr>
 	
 </table>
 
 
 
+<%
+
+		}
+
+}catch(ClassNotFoundException e){
+	
+	//out.println("드라이버가 없어요");
+	
+}catch(SQLException se){
+	
+	 se.printStackTrace();
+	out.println(se);
+	
+}
+
+
+ 
+%>
 
 
 </body>

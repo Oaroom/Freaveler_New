@@ -8,6 +8,22 @@
 </head>
 <body>
 
+<!-- 
+	create table stay(
+	     id int auto_increment primary key not null,
+	     userid varchar(50) not null,
+	     stayName varchar(50),
+	     country varchar(50),
+	     city varchar(50),
+	     star int(3),
+	     price varchar(50),
+	     days varchar(30),
+	     people int(2));
+
+ -->
+
+
+
 <table width="1500px">
 		<tr>
 			<td id="pageTitle">
@@ -19,7 +35,7 @@
  			호텔부터 게스트 하우스까지! <b>프리블러</b>들이 직접 경험하고 추천하는 숙박업소!
 			</td>
 			<td align="right">
-				<form action="write.jsp">
+				<form action="recom.jsp">
 					<input type="submit" value="숙소 추천하기" class="writeB" onclick="writeForm">
 				</form>
 			</td>
@@ -29,10 +45,20 @@
 	
 	<hr>
 	
+		
+	<div id = "stayForm">
 	
-	<jsp:include page="stay_item.jsp"></jsp:include> 
-	<jsp:include page="stay_item.jsp"></jsp:include>
+		<div class="stayItem">
+			 숙소 추천
+		</div>
+		
+		
+		<div class="stayItem">
+			 숙소 추천
+		</div>
 					
+					
+	</div>
 
 
 </body>
