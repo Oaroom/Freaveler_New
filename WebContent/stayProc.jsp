@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+         <%@page import="java.sql.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,17 +9,37 @@
 </head>
 <body>
 
+
+
+<% 
+
+
+
+	// 데이터베이스 세팅
+	
+
+	String url="jdbc:mysql://localhost:3306/freaveler?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8";
+	String user="root";
+	String pw="43176634";
+
+
+
+%>
+
 <!-- 
 	create table stay(
 	     id int auto_increment primary key not null,
 	     userid varchar(50) not null,
-	     stayName varchar(50),
-	     country varchar(50),
-	     city varchar(50),
-	     star int(3),
-	     price varchar(50),
-	     days varchar(30),
-	     people int(2));
+	     stayName varchar(50) not null,
+	     country varchar(50) not null,
+	     city varchar(50) not null,
+	     etc varchar(300),
+	     star int(3) not null,
+	     price varchar(50) not null,
+	     days varchar(30) not null,
+	     people int(2) not null,
+	     reason text not null,
+	     bad text);
 
  -->
 
@@ -45,18 +66,91 @@
 	
 	<hr>
 	
-		
-	<div id = "stayForm">
 	
-		<div class="stayItem">
-			 숙소 추천
-		</div>
+	
+	
+		<div id = "stayForm">
 		
-		
-		<div class="stayItem">
-			 숙소 추천
-		</div>
+				<% 
 					
+				Statement stmt = null;
+				ResultSet rs = null;
+				
+								
+				
+				try{
+					
+					Class.forName("com.mysql.jdbc.Driver");
+					//out.println("드라이버 로드 완료");
+					//mysql 접속
+					
+					Connection con = DriverManager.getConnection(url,user,pw);
+					
+					stmt= con.createStatement();
+					
+					String query = "select * from stay";
+					
+					rs = stmt.executeQuery(query);	
+					
+					rs.last();
+					rs.previous();
+					
+				rs.first();
+					rs.previous();
+					
+					while(rs.next()){
+						
+						
+						
+							%>
+					<div class="stayItem" onclick ="location.href='showStay.jsp?id=<%= rs.getString(1)%>'">
+					
+						
+							<table align="center" >
+								
+								<tr>
+									<th colspan="2">No. <%=rs.getString(1) %></th>
+								</tr>
+								<tr>
+									<td  colspan="2">  <h1 class="stayName"> <%=rs.getString(3) %> &nbsp;  (<%=rs.getString(4) %>) </h1>  </td>
+								</tr>
+								<tr>
+									<td> <%=rs.getString(5) %> 의 <%=rs.getString(6) %> </td>
+									<td> <%=rs.getString(8) %>점 / 5점  </td>
+								</tr>
+								<tr>
+									<td> <%=rs.getString(9) %>원  </td>
+									<td> <%=rs.getString(10) %>박 </td>
+								</tr>
+								
+							</table>
+					
+					</div>
+					
+				
+				<%
+					
+					
+					}
+					
+				
+		
+					
+				}catch(ClassNotFoundException e){
+					
+					//out.println("드라이버가 없어요");
+					
+				}catch(SQLException se){
+					
+					 se.printStackTrace();
+					out.println(se);
+					
+				}
+				
+		%>
+					
+				
+						
 					
 	</div>
 

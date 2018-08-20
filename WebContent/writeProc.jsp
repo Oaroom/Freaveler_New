@@ -97,6 +97,22 @@ function plus(){
 </head>
 <body align="center">
 
+<%
+
+	String userId = (String)session.getAttribute("userId");
+
+	if(userId == null){
+		
+			%>
+			
+			<script type="text/javascript">
+				alert("회원 전용 서비스 입니다. 로그인해주세요!");
+				
+			</script>
+			<meta http-equiv="refresh" content="0;url=content.jsp">
+			<% 	
+	}
+%>
 
 
 

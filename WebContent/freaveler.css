@@ -929,10 +929,11 @@ color:#959595;
 
 #groupB{
 	
-	width:1500px;
+	width:1400px;
 	height:100px;
-	border:3px solid #dddddd;
+	border:3px solid red;
 	border-radius: 30px;
+	background-color: red;
 	
 }
 
@@ -1036,6 +1037,12 @@ color:#959595;
 	
 	}
 	
+	.stayItem:hover{
+	
+		box-shadow: 10px 10px #cdcdcd;
+		
+	}
+	
 	.stayItem{
 	
 	display:inline-block;
@@ -1053,7 +1060,40 @@ color:#959595;
 	
 	}
 	
+	.stayItem table{
 	
+	
+	
+		width:650px;
+		height:200px;
+		
+		
+		
+	}
+	
+	.stayItem th{
+	
+		text-align: left;
+		color:#cccccc;
+	
+	}
+	
+	.stayItem td{
+	
+		width:350px;
+		color:#999999;
+		
+	}
+	
+
+
+
+	.stayName{
+	
+		color:#aaaaaa;
+		line-height: 0.1em;
+	
+	}
 	
 	/*loginInfo css*/
 	
@@ -1118,7 +1158,7 @@ color:#959595;
 	
 	
 	
-	#recomBox input[type=text], input[type=number]{
+	#recomBox input[type=text], input[type=number], select{
 	
 		height: 30px;
 		border:1px solid #dadada;
@@ -1128,7 +1168,7 @@ color:#959595;
 	
 	}
 	
-	#stayName{
+	#stayName, #stayEtc{
 	
 		width:500px;
 	
@@ -1141,3 +1181,138 @@ color:#959595;
 		
 	}
 	
+	#showStayBox{
+	
+		margin:auto;
+
+		font-family:'맑은 고딕';
+		font-size:10pt;
+		color:#999999;
+		
+		background-color : white;
+		border:1px solid #eeeeee;
+		
+		width:870px;
+		min-height: 450px;
+		
+		overflow:hidden;
+	    height:auto;
+		
+		margin-top:20px;
+		margin-bottom:20px;
+		
+		padding-left:30px;
+		padding-bottom:50px;
+		
+	
+	}
+	
+	#showStayBox table{
+	
+	
+		width:600px;
+		height:700px;
+		font-size:13pt;
+		
+	
+	}
+	
+	
+	
+	
+	
+	#showRecom{
+	
+		width:650px;
+		text-align: left;
+		padding:20px;
+		
+		border:1px solid #dddddd;
+		
+			}
+	
+	#showRecom th{
+	
+		width:80px;
+		text-align: center;
+	}
+	
+	
+	
+	#showRecom input[type=text], input[type=number], select{
+	
+		height: 30px;
+		border:1px solid #dadada;
+		border-radius: 20px;
+		margin:10px;
+		padding-left:5px;
+	
+	}
+	
+	
+	#myinfo{
+	
+		
+		
+		margin:auto;
+		padding-top:20px;
+		
+		
+		
+		width:600px;
+		height:80px;
+		
+		background-color: white;
+		
+		border:3px solid #384389;
+		border-radius: 30px;
+		
+		
+		font-size:15pt;
+		font-weight: 900;
+		color:#888888;
+		
+	
+	}
+	
+
+
+	
+	
+	.showCourse{
+	
+	
+	font-family: '맑은고딕';
+	width:800px;
+	margin:10px;
+	margin-bottom: 20px;
+	font-size:15px;
+	border:1px solid #dddddd;
+	border-radius: 10px;
+	padding:20px;
+	background-color:#fafafa;
+	color:#888888;
+	
+	
+	}
+	
+	
+	
+	.showCourse td{
+	
+	
+	
+	border:1px solid #dddddd;
+	border-radius: 30px;
+	background-color: white;
+	
+	
+	
+	}
+	
+	
+	#showText{
+	
+		height: 100px;
+	
+	}

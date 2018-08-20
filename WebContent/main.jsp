@@ -23,15 +23,17 @@
 
 .mainCard{
 
-
+text-align:center;
+line-height:5em;
 display:inline-block;
 float:left;
 
-width:350px;
+width:340px;
 height:250px;
+font-size:30pt;
 margin-top:10px;
 margin:10px;
-border:1px solid #aaaaaa;
+border:2px solid #051b45;
 border-radius: 10px;
 
  position:relative;
@@ -55,8 +57,11 @@ top:150px; left:-1px;
 
 width:350px;
 height:110px;
+
 border:1px solid #aaaaaa;
 border-radius: 10px;
+
+background-color:#fadada;
 
 position:absolute;
  
@@ -88,6 +93,23 @@ position:absolute;
 
 }
 
+
+#nologin{
+
+	margin:auto;
+	text-align:center;
+	
+	width:370px;
+	height: 320px;
+	
+	font-size:15pt;
+	font-weight: 900;
+	
+	color:#bbbbbb;
+	
+
+
+}
 
 
 
@@ -156,8 +178,30 @@ try{
 		
 		<div id="recom">
 		
-			<h4> 오늘의 추천여행 </h4>
+			<h4> 당신의 추천여행 </h4>
 			
+			<%
+
+			String userId = (String)session.getAttribute("userId");
+		
+			if(userId == null){
+				
+				%>
+				
+				<div id="nologin">
+					<br><br>
+					
+					<img src="img/padlock.png" width="150px" height="150px"> <br><br>
+					로그인이 필요한 서비스 입니다!  :-)
+				
+				</div>	
+					
+				
+				<%
+				
+			}else{
+				
+%>
 			
 			<table align="center" width="360px" height="325px">
 				<tr>
@@ -180,6 +224,12 @@ try{
 			
 			</table>
 			
+			<%
+			
+			
+}
+			%>
+			
 		</div>
 		
 		</td>
@@ -189,7 +239,7 @@ try{
 			
 			<%
 			
-			String userId = (String)session.getAttribute("userId");
+		
 			
 			if(userId==null){ %>
 			<form action="login.jsp">
@@ -300,13 +350,15 @@ try{
 		%>
 		
 			
-			<div class="mainCard">
+			<div class="mainCard" onclick ="location.href='show.jsp?id=<%= rs.getString(1)%>'">
 			
-			<%= rs.getString(3) %>
+				<%= rs.getString(3) %>
 			
 				<div class="subCard">
 				
-					랄랄라
+					
+					<%= rs.getString(7) %> 의 
+					<%= rs.getString(8) %>
 				
 				</div>
 			

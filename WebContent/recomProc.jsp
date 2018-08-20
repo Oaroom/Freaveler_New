@@ -25,10 +25,25 @@
 </head>
 <body align="center">
 
+<%
+
+	String userId = (String)session.getAttribute("userId");
+
+	if(userId == null){
+		
+			%>
+			
+			<script type="text/javascript">
+				alert("회원 전용 서비스 입니다. 로그인해주세요!");
+				
+			</script>
+			<meta http-equiv="refresh" content="0;url=content.jsp">
+			<% 	
+	}
+%>
 
 
-
-<form action="saveWrite.jsp" method="post">
+<form action="saveStay.jsp" method="post">
 
 <div id="board">
 	
@@ -51,8 +66,22 @@
 			
 			
 			
+		<form action="saveStay.jsp" method="post">
+			<table id="recomTable" align="center"  >
 			
-			<table id="recomTable" align="center" >
+			
+				<tr>
+					<th>
+					위&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;치
+					</th>
+					<td colspan="3">
+					
+					<input type="text" id="stayCountry" name="stayCountry" placeholder="대한민국" required/>의 <input type="text" id="stayCity" name="stayCity" placeholder="서울" required/><br>
+					<input type="text" id="stayEtc" name="stayEtc" placeholder="추가 정보를 기입해주세요  :-) 필수는 아니에요! ex) 신림역 2번 출구 근처" />
+					
+					</td>
+					
+				</tr>
 			
 				<tr>
 					<th>
@@ -61,6 +90,26 @@
 					
 					<td colspan="3">
 					<input type="text" id="stayName" name="stayName" placeholder="파라다이스 호텔" required/><br>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>
+					숙소종류
+					</th>
+					
+					<td colspan="3">
+					
+					
+					<select name="stayType">
+							<option value="">선택</option>
+					 		<option value="호텔">호텔</option>
+						  	<option value="게스트하우스">게스트하우스</option>
+						  	<option value="에어비엔비" >에어비엔비</option>
+						  	<option value="기타" >기타</option>
+					</select>
+					
+					
 					</td>
 				</tr>
 				
@@ -138,7 +187,7 @@
 	
 			</div>
 		
-		
+		</form>
 		
 	</div>
 </form>

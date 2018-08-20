@@ -8,24 +8,38 @@
 </head>
 <body>
 
+<% 
+
+
+String userId = (String)session.getAttribute("userId");
+
+
+%>
+
+
 <!-- 
-	create table stay(
+	create table mypage(
 	     id int auto_increment primary key not null,
 	     userid varchar(50) not null,
-	     stayName varchar(50),
-	     country varchar(50),
-	     city varchar(50),
-	     star int(3),
-	     price varchar(50),
-	     days varchar(30),
-	     people int(2));
+	     course varchar(50),
+	     stay varchar(50),
+	     city varchar(50));
 
  -->
 
 
+<div id="board">
+	
+	<br>
 
-<table width="1500px">
-	</table>
+	<div id="myinfo"> 
+		<%= userId %> 님 환영합니다.! <br>
+		마음에 드는 여행기와 숙소정보를 담으세요!
+	</div>
+<br>
+
+</div>
+
 	
 	
 </body>

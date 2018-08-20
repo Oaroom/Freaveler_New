@@ -108,10 +108,110 @@ try{
 			</tr>
 	
 		</table>
+	
+		
+		
+		
 		
 		
 		<div id="courseBox">
 		
+		
+		
+		<%
+		
+		String day;
+		
+		if(rs.getString(10) == null || rs.getString(10).equals("")){
+			
+			day = "0";	
+			
+		}else{
+			
+			day = rs.getString(10);
+			
+		}
+		
+		
+		String course[]= rs.getString(9).split("/");
+		String days[] =day.split("/");
+		
+		
+			int count=0;
+			int i=0;
+		
+			while(true){
+				
+				if(count >= course.length){break;}
+				
+					
+					%>
+					
+					<table class='showCourse'>
+							<tr style='height: 50px;'>
+								
+								<th>
+									장소명
+								</th>
+								<td>
+								<%=	course[count] %>
+								</td>
+								<th>
+									시간
+								</th>
+								<td>
+								<%=	course[count+1] %>
+								</td>
+								<th>
+									입장료
+								</th>
+								<td>
+								<%=	course[count+2] %>
+								</td>
+								<th>
+									별점
+								</th>
+								<td>
+								<%=	course[count+3] %>
+								</td>
+							</tr>
+							<tr>
+								<td colspan='8' id="showText">
+									<%=	course[count+4] %>
+								</td>
+							</tr>
+					</table>
+	
+					
+					
+					
+					<%
+					
+					i++;
+					
+					
+					for(int j = 0 ; j < days.length ; j++){
+						
+						if(i == Integer.parseInt(days[j])){
+							%>
+							 <div class='end'> <input type='hidden' name=end"+count+"> 오늘 하루는 여기까지! 수고했어요 :-) </div>
+							<%
+						}
+						
+						
+					}
+					
+					
+					
+					
+					
+					
+					
+				count = count+5;
+				
+				
+			}
+		%>
 		
 			
 			
