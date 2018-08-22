@@ -60,7 +60,7 @@ PreparedStatement pstmt = con.prepareStatement(sql);
 
 int result = pstmt.executeUpdate();
 
-if(result == 1){
+if(result != 0){
 	
 %>
 

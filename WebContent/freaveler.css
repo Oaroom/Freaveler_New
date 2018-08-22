@@ -73,6 +73,7 @@ background-color: #f0f0f0;
 	
 	
 	
+	
 	/* 슬라이드쇼 css */
 	
 	
@@ -1099,7 +1100,7 @@ color:#959595;
 	
 	#loginInfo{
 	
-	border:1px solid #dddddd;
+	 text-align: center;
 	
 	}
 	

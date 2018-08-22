@@ -31,6 +31,7 @@
 	     id int auto_increment primary key not null,
 	     userid varchar(50) not null,
 	     stayName varchar(50) not null,
+	     type varchar(30) not null,
 	     country varchar(50) not null,
 	     city varchar(50) not null,
 	     etc varchar(300),

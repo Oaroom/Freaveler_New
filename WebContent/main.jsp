@@ -30,7 +30,7 @@ float:left;
 
 width:340px;
 height:250px;
-font-size:30pt;
+font-size:20pt;
 margin-top:10px;
 margin:10px;
 border:2px solid #051b45;
@@ -61,7 +61,7 @@ height:110px;
 border:1px solid #aaaaaa;
 border-radius: 10px;
 
-background-color:#fadada;
+background-color:#bbbbbb;
 
 position:absolute;
  
@@ -69,13 +69,15 @@ position:absolute;
  overflow: hidden;
  opacity: 0.8;
  
- color:#fdfdfd;
+ color:#bbbbbb;
  
  -webkit-transition-duration:1s, 1s;
  -moz-transition-duration:1s, 1s;
  transition-duration: 1s,1s;
  border-bottom-left-radius: 10px;
  border-bottom-right-radius:  10px;
+ 
+ line-height: 3em;
 
 
 }
@@ -87,7 +89,7 @@ position:absolute;
     top:50px; left:-1px;
     height:200px;
     color:#ffffff;
-    background-color: #444444;
+    background-color: #D69746;
 
 
 
@@ -108,6 +110,19 @@ position:absolute;
 	color:#bbbbbb;
 	
 
+
+}
+
+#logoutB{
+
+	margin:10px;
+	width:150px;
+	height: 50px;
+	color:white;
+	font-weight:900;
+	background-color:#093079;
+	border:1px solid white;
+	border-radius: 10px;
 
 }
 
@@ -168,9 +183,10 @@ try{
 			    <!-- empty element for pager links -->
 			    <div class="cycle-pager"></div>
 			
-			    <img src="http://malsup.github.io/images/p2.jpg">
-			    <img src="http://malsup.github.io/images/p3.jpg">
-			    <img src="http://malsup.github.io/images/p4.jpg">
+			    <img src="img/1.jpg">
+			    <img src="img/2.jpg">
+			    <img src="img/3.jpg">
+			    <img src="img/4.jpg">
 			</div>
 		
 		</td>
@@ -201,12 +217,28 @@ try{
 				
 			}else{
 				
+				Statement stmt1 = null;
+				ResultSet rs1 = null;
+
+								
+
+			
+					
+					stmt1= con.createStatement();
+					
+					String query1 = "select * from course where type='아시아/'";
+					
+					rs1 = stmt1.executeQuery(query1);	
+					
+					
+				
+			
 %>
 			
 			<table align="center" width="360px" height="325px">
 				<tr>
 					<td>
-					<jsp:include page="main_item.jsp"></jsp:include>
+						
 					</td>
 					<td>
 					<jsp:include page="main_item.jsp"></jsp:include>
@@ -283,7 +315,7 @@ try{
 			
 			<div id="loginInfo">
 			
-				<b><%=userId %></b>님 <br>
+				<b><%=userId %></b>님 , 환영합니다.<br>
 				
 				
 				<form action="logout.jsp" method="post">
@@ -358,8 +390,9 @@ try{
 				
 					
 					<%= rs.getString(7) %> 의 
-					<%= rs.getString(8) %>
-				
+					<%= rs.getString(8) %><br>
+					<%= rs.getString(4) %>~<%= rs.getString(4) %>
+					
 				</div>
 			
 			</div>
